@@ -23,5 +23,12 @@ public:
         top = NULL;
     }
 
-         int push(int value){}
+         int push(int value){
+        Node *newNode = new Node();
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
+        cout << "Push value: " << value << endl;
+        return value;
+         }
 };
